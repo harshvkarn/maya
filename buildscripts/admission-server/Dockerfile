@@ -1,4 +1,4 @@
-FROM aarch64/ubuntu:16.04
+FROM arm64v8/ubuntu:16.04
 
 RUN apt-get update && apt-get install -y \
     iproute2

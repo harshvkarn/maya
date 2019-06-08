@@ -3,7 +3,7 @@
 # cstor-volume-mgmt  releases.
 #
 
-FROM aarch/ubuntu:16.04
+FROM arm64v8/ubuntu:16.04
 RUN apt-get update; exit 0
 RUN apt-get -y install rsyslog
 
