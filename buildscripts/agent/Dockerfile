@@ -3,7 +3,7 @@
 # maya-agent  releases.
 #
 
-FROM ubuntu:16.04
+FROM aarch64/ubuntu:16.04
 
 # TODO: The following env variables should be auto detected.
 ENV MAYA_AGENT_NETWORK="eth0"

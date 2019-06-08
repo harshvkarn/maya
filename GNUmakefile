@@ -79,7 +79,7 @@ else
   export BASE_TAG
 endif
 
-CSTOR_BASE_IMAGE= openebs/cstor-base:${BASE_TAG}
+CSTOR_BASE_IMAGE= openebs/cstor-base:arm
 
 # Specify the name for the binaries
 MAYACTL=mayactl

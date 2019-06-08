@@ -3,7 +3,7 @@
 # its latest binary
 #
 
-FROM alpine:3.6
+FROM armhf/alpine:3.5
 
 # copy the latest binary
 COPY upgrade /usr/local/bin/upgrade
