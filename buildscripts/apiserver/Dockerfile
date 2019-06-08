@@ -3,7 +3,7 @@
 # maya api server's releases.
 #
 
-FROM armhf/alpine:3.5
+FROM arm64v8/alpine:3.6
 
 # TODO: The following env variables should be auto detected.
 ENV MAYA_API_SERVER_NETWORK="eth0"
