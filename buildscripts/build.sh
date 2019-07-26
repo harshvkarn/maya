@@ -42,8 +42,8 @@ elif [ "$UNAME" = "Linux" ] ; then
   XC_OS="linux"
 fi
 
-if [ "${ARCH}" = "i686" ] ; then
-    XC_ARCH='386'
+if [ "${ARCH}" = "aarch64" ] ; then
+    XC_ARCH='arm64'
 elif [ "${ARCH}" = "x86_64" ] ; then
     XC_ARCH='amd64'
 else

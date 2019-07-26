@@ -3,19 +3,20 @@
 # maya api server's releases.
 #
 
-FROM arm64v8/alpine:3.6
+#FROM arm64v8/alpine:3.6
+FROM arm64v8/ubuntu:16.04
 
 # TODO: The following env variables should be auto detected.
 ENV MAYA_API_SERVER_NETWORK="eth0"
 
-RUN apk add --no-cache \
+RUN apt update && apt install -y \
     iproute2 \
     bash \
     curl \
     net-tools \
-    mii-tool \
+#    mii-tool \
     procps \
-    libc6-compat \
+#    libc6-compat \
     ca-certificates
 RUN mkdir -p /etc/apiserver/orchprovider
 RUN mkdir -p /etc/apiserver/specs
@@ -37,5 +38,6 @@ LABEL org.label-schema.schema-version="1.0"
 LABEL org.label-schema.build-date=$BUILD_DATE
 
 ENTRYPOINT entrypoint.sh "${MAYA_API_SERVER_NETWORK}"
+#ENTRYPOINT ['/usr/local/bin/maya-apiserver']
 
 EXPOSE 5656

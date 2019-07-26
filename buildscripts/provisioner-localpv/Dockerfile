@@ -1,16 +1,17 @@
-FROM arm64v8/alpine:3.6
+FROM arm64v8/ubuntu:16.04
 
-RUN apk add --no-cache \
+RUN apt update && apt install -y \
     iproute2 \
     bash \
     curl \
     net-tools \
-    mii-tool \
+ #   mii-tool \
     procps \
-    libc6-compat \
+#    libc6-compat \
     ca-certificates
 
 COPY provisioner-localpv /
+RUN ls
 
 ARG BUILD_DATE
 
